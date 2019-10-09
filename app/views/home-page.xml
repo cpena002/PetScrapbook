@@ -1,0 +1,6 @@
+<Page loaded="onLoaded">
+  <StackLayout>
+    <Label id="title" /> 
+    <Label id="age" />
+  </StackLayout>
+</Page>
