@@ -1,0 +1,12 @@
+<Page loaded="onLoaded">
+    <StackLayout> 
+        <Label text="Title: " />
+        <TextField hint="" text="{{ title }}" />
+        <Label text="Age: " textWrap="true" />
+        <DatePicker date="{{ date }}" year="1980" month="4" day="20"></DatePicker>
+        <Label text="Gender: " textWrap="true" />
+        <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}"/>
+        <Button text="Done" tap="onTap" />
+        
+    </StackLayout>
+</Page>

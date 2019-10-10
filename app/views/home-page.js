@@ -40,6 +40,7 @@
   * Instead of definding the source and target properties in a javascript object (bindingOptions above), you the declare 
     the binding relationship between the UI element and an observable in the page's XML markup. 
   * To use the XML Binding Method, you need to set the PAGE'S BINDING CONTEXT 
+  * With XML Binding you need to set the page's bindingContext to the instance of the Observable Object
 */
 
 var observableModule = require("data/observable"); // Old version
@@ -48,7 +49,9 @@ var viewModule = require("ui/core/view"); // gives access to UI elements
 exports.onLoaded = function(args){
     var page = args.object; // GET THE PAGE OBJECT
     var home = new observableModule.fromObject({ // fromObject IS A SHOROTCUT TO SETTING PROPERTIES OF OBSERVABLES.
+
         Header: "Pet Scrapbook", // THE PROPERTY NAME MUST MATCH THE NAME USED IN THE XML MARK UP
+
         Footer: " Brosteins 2016"
     }); // INSTANTIATE AN OBSERVABLE OBJECT
     page.bindingContext = home; // SETTING THE PAGE'S BINDING CONTEXT. PET IS ESTABLISHED AS A PAGE-LEVEL OBSERVABLE 
