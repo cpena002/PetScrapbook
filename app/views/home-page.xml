@@ -1,6 +1,14 @@
 <Page loaded="onLoaded">
-  <StackLayout>
-    <Label id="title" /> 
-    <Label id="age" />
-  </StackLayout>
+  <ScrollView>
+    <StackLayout>
+        <Label class="header" text="{{ Header }}" />
+        <Image src="~/images/home.png" />
+        <Label class="footer" text="{{ Footer }}" />
+
+        <StackLayout orientation="horizontal" horizontalAlignment="center" >
+            <Button class="marginRight" text="About" />
+            <Button class="margineLeft" text="Continue" />
+        </StackLayout>
+    </StackLayout>
+  </ScrollView>
 </Page>
